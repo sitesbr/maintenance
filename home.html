@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia de Jiu Jitsu Vila Matilde</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #eab308; /* yellow */
+            --secondary: #000000; /* black */
+            --accent: #808080; /* gray */
+        }
+        .hero-section {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://static.wixstatic.com/media/0da99f_bd4ed814c60c48f1ba25cd8f98b621be~mv2.jpg/v1/fill/w_1186,h_833,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0da99f_bd4ed814c60c48f1ba25cd8f98b621be~mv2.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .method-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .method-card {
+            transition: all 0.3s ease;
+        }
+        
+        .placeholder-img {
+            background-color: #e5e7eb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6b7280;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Header -->
+    <header class="bg-[#000000] text-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="#home">
+                    <img src="https://static.wixstatic.com/media/0da99f_b4419b84c77f49dab61031a4d49b2151~mv2.png/v1/crop/x_68,y_0,w_860,h_317/fill/w_190,h_70,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0da99f_b4419b84c77f49dab61031a4d49b2151~mv2.png" 
+                         alt="Academia de Jiu Jitsu Vila Matilde" 
+                         class="h-12 md:h-16">
+                </a>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="text-white hover:text-[#eab308] font-medium text-xl transition-colors duration-300">Home</a>
+                <a href="#sobre" class="text-white hover:text-[#eab308] font-medium text-xl transition-colors duration-300">Sobre Nós</a>
+                <a href="#metodologia" class="text-white hover:text-[#eab308] font-medium text-xl transition-colors duration-300">Metodologia</a>
+                <a href="#planos" class="text-white hover:text-[#eab308] font-medium text-xl transition-colors duration-300">Planos</a>
+                <a href="#contato" class="text-white hover:text-[#eab308] font-medium text-xl transition-colors duration-300">Contato</a>
+            </nav>
+            
+            <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section min-h-screen flex items-center text-white">
+        <div class="container mx-auto px-4 py-20">
+            <div class="max-w-2xl">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">ACADEMIA DE JIU JITSU PARA TODOS</h1>
+                <h2 class="text-2xl md:text-3xl font-semibold mb-6">Para iniciantes, avançados e competidores.</h2>
+                <p class="text-lg mb-8 leading-relaxed">
+                    Não importa se você nunca pisou num tatame até desconfia que o Jiu Jitsu seja um esporte apenas para competidores. 
+                    Você pode fazer Jiu Jitsu por diferentes objetivos (gosta de aulas de lutas marciais, quer aprender a se defender, 
+                    perder peso, ter um tempo para relaxar com os amigos ou ser um campeão). Jiu Jitsu é para você!
+                </p>
+                <a href="#metodologia" class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-8 rounded-full inline-block transition duration-300">
+                    Saiba Mais
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">SOBRE NÓS</h2>
+                <div class="w-24 h-1 bg-yellow-500 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                    <img src="https://static.wixstatic.com/media/0da99f_dde6ea20c5e84c1cab1895de36399923~mv2.jpg/v1/fill/w_1024,h_295,al_c,q_80,enc_avif,quality_auto/0da99f_dde6ea20c5e84c1cab1895de36399923~mv2.jpg" 
+                         alt="Academia Alliance" 
+                         class="rounded-lg shadow-xl w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">A MAIOR E MAIS PREMIADA EQUIPE DE JIU JITSU DO MUNDO</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        A Alliance Jiu-Jitsu é uma das equipes mais premiadas da história do Jiu-Jitsu esportivo. 
+                        Fundada em 1993 por Fabio Gurgel, Alexandre Paiva, Fernando Gurgel e Alexandre "Gigi" Paiva, 
+                        a equipe já conquistou inúmeros títulos mundiais e formou grandes campeões.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Nossa academia em Vila Matilde traz toda essa tradição e excelência para o bairro, 
+                        com professores qualificados e uma estrutura completa para atender alunos de todos os níveis.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology Section -->
+    <section id="metodologia" class="py-16 bg-[#191919]">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">METODOLOGIA</h2>
+                <div class="w-24 h-1 bg-yellow-500 mx-auto"></div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto text-center mb-12">
+                <p class="text-gray-200 leading-relaxed">
+                    Desenvolver uma metodologia própria para ensinar JIU JITSU transformou a história da ALLIANCE. 
+                    Criamos um método de ensino que cuida do aluno desde a primeira aula, para que ele entenda todo o processo 
+                    e possa evoluir em cada treino. Separamos os níveis de aulas e treinamos nossos professores para que entreguem 
+                    uma aula cada vez melhor. Nosso método é revisitado e atualizado com frequência baseado nas melhores práticas 
+                    em nossas academias ao redor do mundo.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Iniciantes -->
+                <div class="method-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-48">
+                        <img src="https://static.wixstatic.com/media/61c425f7497c41999e10fc1bf7da2f86.jpg/v1/fill/w_301,h_240,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Jujitsu%20Posture.jpg" 
+                             alt="Iniciantes" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">INICIANTES</h3>
+                        <p class="text-gray-700">
+                            Defesa Pessoal, técnicas e fundamentos do Jiu Jitsu. Uma das turmas de maior sucesso em nossa escola.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Intermediário -->
+                <div class="method-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-48">
+                        <img src="https://static.wixstatic.com/media/0da99f_31d1a64b64ee4024b8039844ecbf1f43~mv2.jpg/v1/fill/w_301,h_240,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/foto%20fem.jpg" 
+                             alt="Intermediário" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">INTERMEDIÁRIO</h3>
+                        <p class="text-gray-700">
+                            O objetivo deste módulo é fazer a transição do aluno iniciante para de fato começar a treinar. 
+                            Ideal também para quem deseja retornar a prática.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Avançado -->
+                <div class="method-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-48">
+                        <img src="https://static.wixstatic.com/media/0da99f_ba4d5c82c62140658131a5f43d5ce84b~mv2.jpeg/v1/fill/w_301,h_240,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_1096.jpeg" 
+                             alt="Avançado" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">AVANÇADO</h3>
+                        <p class="text-gray-700">
+                            Aprenda como unir múltiplas combinações de movimentos e posições. Técnicas de alto nível, 
+                            saiba como aplicá-las com sucesso.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Competição -->
+                <div class="method-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-48">
+                        <img src="https://static.wixstatic.com/media/0da99f_a82a742896524446a7d47446176ffd2a~mv2.jpg/v1/fill/w_301,h_240,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/unnamed%20(6).jpg" 
+                             alt="Competição" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">COMPETIÇÃO</h3>
+                        <p class="text-gray-700">
+                            Módulo exclusivo para formar competidores e representar a Alliance em campeonatos da IBJJF.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Kids -->
+                <div class="method-card bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="h-48">
+                        <img src="https://static.wixstatic.com/media/0da99f_b9bc1dabbdd3475fa4121e56217d9a60~mv2.jpeg/v1/crop/x_0,y_78,w_730,h_582/fill/w_301,h_240,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_1094.jpeg" 
+                             alt="Kids" 
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">KIDS</h3>
+                        <p class="text-gray-700">
+                            Muito mais do que golpes e posições. As aulas de Jiu Jitsu para crianças têm o objetivo de melhorar 
+                            a concentração, desenvolver a auto confiança e disciplina.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Planos -->
+                <div class="method-card bg-[#eab308] rounded-lg shadow-lg overflow-hidden">
+                    <div class="p-6 flex flex-col justify-center items-center h-full">
+                        <h3 class="text-xl font-bold text-white mb-3">CONHEÇA NOSSOS PLANOS</h3>
+                        <p class="text-white text-center mb-4">
+                            Temos opções para todos os perfis e objetivos. Venha conhecer nossa estrutura e faça uma aula experimental.
+                        </p>
+                        <a href="#planos" class="bg-white text-black hover:bg-gray-100 font-bold py-2 px-6 rounded-full inline-block transition duration-300">
+                            Ver Planos
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Section -->
+    <section class="py-16 bg-[#333333] text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">SIGA-NOS NO INSTAGRAM</h2>
+                <div class="w-24 h-1 bg-red-600 mx-auto"></div>
+                <p class="text-xl mt-4">@ALLIANCEVILAMATILDE</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto text-center">
+                <a href="https://www.instagram.com/alliancevilamatilde/" 
+                   class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-8 rounded-full inline-flex items-center transition duration-300">
+                    <i class="fab fa-instagram mr-2 text-xl"></i> Reproduzir vídeo
+                </a>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+                <div class="h-48">
+                    <img src="https://static.wixstatic.com/media/9ae463aebd3a472aaaf167bfa530dde2.jpg/v1/crop/x_527,y_0,w_4266,h_3413/fill/w_301,h_240,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Jujitsu%20Man%20Training.jpg" 
+                         alt="Instagram Post 1" 
+                         class="w-full h-full object-cover">
+                </div>
+                <div class="h-48">
+                    <img src="https://static.wixstatic.com/media/0da99f_16eeaff7701444d7a38cea38535ac40b~mv2.jpg/v1/fill/w_301,h_240,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screen%20Shot%202019-01-31%20at%2016_07_edited.jpg" 
+                         alt="Instagram Post 2" 
+                         class="w-full h-full object-cover">
+                </div>
+                <div class="h-48">
+                    <img src="https://static.wixstatic.com/media/9ae463aebd3a472aaaf167bfa530dde2.jpg/v1/crop/x_527,y_0,w_4266,h_3413/fill/w_301,h_240,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Jujitsu%20Man%20Training.jpg" 
+                         alt="Instagram Post 3" 
+                         class="w-full h-full object-cover">
+                </div>
+                <div class="h-48">
+                    <img src="https://static.wixstatic.com/media/0da99f_16eeaff7701444d7a38cea38535ac40b~mv2.jpg/v1/fill/w_301,h_240,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screen%20Shot%202019-01-31%20at%2016_07_edited.jpg" 
+                         alt="Instagram Post 4" 
+                         class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experimental Class Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2">
+                    <img src="https://static.wixstatic.com/media/0da99f_48b86ebe1cb6479f8c0a36a867c9a7bf~mv2.jpg/v1/fill/w_589,h_466,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/0da99f_48b86ebe1cb6479f8c0a36a867c9a7bf~mv2.jpg" 
+                         alt="Aula Experimental" 
+                         class="rounded-lg shadow-xl w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">AULA EXPERIMENTAL</h2>
+                    <div class="w-24 h-1 bg-yellow-500 mb-6"></div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        AGENDE A SUA! Uma experiência além do treino! Aula dinâmica, onde você aprende noções básicas de Jiu Jitsu além de conhecer algumas posturas com a melhor equipe de professores! Essa aula é grátis e individual.
+                    </p>
+                    <a href="#contato" class="bg-[#000000] hover:bg-[#eab308] text-white hover:text-black font-bold py-3 px-8 rounded-full inline-block transition duration-300">
+                        QUERO AGENDAR
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contato" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">CONTATO</h2>
+                <div class="w-24 h-1 bg-red-600 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Nossa Localização</h3>
+                    <p class="text-gray-600 mb-4">
+                        Av. Marcondes de Brito, 246 - Vila Matilde, São Paulo - SP 03509-000, Brasil
+                    </p>
+                    <div class="mb-6 rounded-lg overflow-hidden">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.1234567890123!2d-46.54321098765432!3d-23.54321098765432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDMyJzM1LjgiUyA0NsKwMzInMzUuOCJX!5e0!3m2!1sen!2sbr!4v1234567890123!5m2!1sen!2sbr" 
+                                width="100%" 
+                                height="300" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                class="rounded-lg shadow-md">
+                        </iframe>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Horário de Funcionamento</h4>
+                        <p class="text-gray-600">Segunda a Sexta: 07:00 - 22:00</p>
+                        <p class="text-gray-600">Sábado: 09:00 - 14:00</p>
+                        <p class="text-gray-600">Domingo: Fechado</p>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h4 class="text-xl font-semibold text-gray-800 mb-2">Email</h4>
+                        <p class="text-gray-600">alliancevilamatilde@gmail.com</p>
+                    </div>
+                    
+                    <div class="flex space-x-4">
+                        <a href="https://wa.me/5511999999999" class="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                        </a>
+                        <a href="https://www.instagram.com/alliancevilamatilde/" class="bg-pink-600 hover:bg-pink-700 text-white p-3 rounded-full">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <a href="#formulario" class="bg-black hover:bg-[#eab308] text-white font-bold py-3 px-8 rounded-full inline-block transition duration-300">
+                            AGENDE SUA AULA EXPERIMENTAL
+                        </a>
+                    </div>
+                </div>
+                
+                <div id="formulario" class="md:w-1/2 bg-[#ffffff] p-8 rounded-lg shadow-lg">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-6">Entre em Contato</h3>
+                    <form>
+                        <div class="mb-4">
+                            <label for="nome" class="block text-gray-700 font-medium mb-2">Nome</label>
+                            <input type="text" id="nome" name="nome" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="telefone" class="block text-gray-700 font-medium mb-2">Telefone</label>
+                            <input type="tel" id="telefone" name="telefone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="endereco" class="block text-gray-700 font-medium mb-2">Endereço</label>
+                            <input type="text" id="endereco" name="endereco" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="assunto" class="block text-gray-700 font-medium mb-2">Assunto</label>
+                            <input type="text" id="assunto" name="assunto" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="mensagem" class="block text-gray-700 font-medium mb-2">Mensagem</label>
+                            <textarea id="mensagem" name="mensagem" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-black hover:bg-[#eab308] text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                            Enviar
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plans Section -->
+    <section id="planos" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">NOSSOS PLANOS</h2>
+                <div class="w-24 h-1 bg-red-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <!-- Plano Básico -->
+                <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden border border-black">
+                    <div class="bg-black text-white py-4 px-6">
+                        <h3 class="text-xl font-bold">BÁSICO</h3>
+                        <p class="text-gray-300">Ideal para iniciantes</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-center mb-6">
+                            <span class="text-4xl font-bold text-gray-800">R$ 150</span>
+                            <span class="text-gray-600">/mês</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>2 aulas por semana</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Acesso a aulas iniciantes</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Uniforme não incluso</span>
+                            </li>
+                        </ul>
+                        <a href="#contato" class="block text-center bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-4 rounded-lg transition duration-300">
+                            Matricule-se
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Plano Intermediário -->
+                <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden border-2 border-[#eab308] transform scale-105">
+                    <div class="bg-yellow-500 text-black py-4 px-6">
+                        <h3 class="text-xl font-bold">INTERMEDIÁRIO</h3>
+                        <p class="text-red-100">Mais popular</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-center mb-6">
+                            <span class="text-4xl font-bold text-gray-800">R$ 220</span>
+                            <span class="text-gray-600">/mês</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>3 aulas por semana</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Acesso a todas as aulas</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Uniforme incluso</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Acesso a workshops</span>
+                            </li>
+                        </ul>
+                        <a href="#contato" class="block text-center bg-[#000000] hover:bg-gray-800 text-white font-bold py-3 px-4 rounded-lg transition duration-300">
+                            Matricule-se
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Plano Avançado -->
+                <div class="bg-gray-50 rounded-lg shadow-lg overflow-hidden border border-black">
+                    <div class="bg-black text-white py-4 px-6">
+                        <h3 class="text-xl font-bold">AVANÇADO</h3>
+                        <p class="text-gray-300">Para competidores</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-center mb-6">
+                            <span class="text-4xl font-bold text-gray-800">R$ 290</span>
+                            <span class="text-gray-600">/mês</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Aulas ilimitadas</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Acesso a todas as aulas</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>2 uniformes inclusos</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Treinos especiais</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-500 mr-2"></i>
+                                <span>Preparação para competições</span>
+                            </li>
+                        </ul>
+                        <a href="#contato" class="block text-center bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-4 rounded-lg transition duration-300">
+                            Matricule-se
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <p class="text-gray-600 mb-4">* Planos para crianças têm valores especiais</p>
+                <a href="#contato" class="inline-block bg-black hover:bg-gray-900 text-white font-bold py-3 px-8 rounded-full transition duration-300">
+                    Fale conosco para mais informações
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-gray-400">© 2023 Copyright – J G A SANCHEZ SOTELO</p>
+                </div>
+                
+                <div class="flex space-x-6">
+                    <a href="https://wa.me/5511999999999" class="text-gray-400 hover:text-yellow-500">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                    </a>
+                    <a href="https://www.instagram.com/alliancevilamatilde/" class="text-gray-400 hover:text-pink-400">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-8 pt-6 border-t border-gray-800 text-center text-gray-400">
+                <p>Academia de Jiu Jitsu Vila Matilde - Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5511999999999" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg z-50">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <script>
+        // Enhanced mobile menu toggle with close button
+        const menuToggle = document.getElementById('menu-toggle');
+        const nav = document.querySelector('nav');
+        
+        menuToggle.addEventListener('click', function() {
+            nav.classList.toggle('hidden');
+            nav.classList.toggle('fixed');
+            nav.classList.toggle('inset-0');
+            nav.classList.toggle('flex');
+            nav.classList.toggle('flex-col');
+            nav.classList.toggle('items-center');
+            nav.classList.toggle('justify-center');
+            nav.classList.toggle('bg-black');
+            nav.classList.toggle('z-40');
+            nav.classList.toggle('space-y-8');
+            nav.classList.toggle('text-white');
+            
+            // Toggle between bars and times icon
+            const icon = this.querySelector('i');
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+    </script>
+</body>
+</html>
