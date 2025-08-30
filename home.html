@@ -44,22 +44,35 @@
             <div class="flex items-center">
                 <a href="#home">
                     <img src="https://static.wixstatic.com/media/0da99f_b4419b84c77f49dab61031a4d49b2151~mv2.png/v1/crop/x_68,y_0,w_860,h_317/fill/w_190,h_70,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0da99f_b4419b84c77f49dab61031a4d49b2151~mv2.png" 
-                         alt="Academia de Jiu Jitsu Vila Matilde" 
+                         alt="Academia de Jiu Jitsu Guarulhos" 
                          class="h-12 md:h-16">
                 </a>
             </div>
             
-            <nav class="hidden md:flex space-x-8">
-                <a href="#home" class="text-white hover:text-[#eab308] font-medium text-xl transition-colors duration-300">Home</a>
-                <a href="#sobre" class="text-white hover:text-[#eab308] font-medium text-xl transition-colors duration-300">Sobre Nós</a>
-                <a href="#metodologia" class="text-white hover:text-[#eab308] font-medium text-xl transition-colors duration-300">Metodologia</a>
-                <a href="#planos" class="text-white hover:text-[#eab308] font-medium text-xl transition-colors duration-300">Planos</a>
-                <a href="#contato" class="text-white hover:text-[#eab308] font-medium text-xl transition-colors duration-300">Contato</a>
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-4 md:space-x-8">
+                <a href="#home" class="text-white hover:text-[#eab308] font-medium text-lg md:text-xl transition-colors duration-300">Home</a>
+                <a href="#sobre" class="text-white hover:text-[#eab308] font-medium text-lg md:text-xl transition-colors duration-300">Sobre Nós</a>
+                <a href="#metodologia" class="text-white hover:text-[#eab308] font-medium text-lg md:text-xl transition-colors duration-300">Metodologia</a>
+                <a href="#planos" class="text-white hover:text-[#eab308] font-medium text-lg md:text-xl transition-colors duration-300">Planos</a>
+                <a href="#contato" class="text-white hover:text-[#eab308] font-medium text-lg md:text-xl transition-colors duration-300">Contato</a>
             </nav>
-            
-            <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white focus:outline-none" id="mobile-menu-button">
                 <i class="fas fa-bars text-2xl"></i>
             </button>
+
+            <!-- Mobile Dropdown Menu -->
+            <div id="mobile-menu" class="hidden absolute top-full left-0 right-0 bg-black z-50 md:hidden">
+                <div class="container mx-auto px-4 py-3 flex flex-col space-y-4">
+                    <a href="#home" class="text-white hover:text-[#eab308] font-medium text-lg transition-colors duration-300 py-2">Home</a>
+                    <a href="#sobre" class="text-white hover:text-[#eab308] font-medium text-lg transition-colors duration-300 py-2">Sobre Nós</a>
+                    <a href="#metodologia" class="text-white hover:text-[#eab308] font-medium text-lg transition-colors duration-300 py-2">Metodologia</a>
+                    <a href="#planos" class="text-white hover:text-[#eab308] font-medium text-lg transition-colors duration-300 py-2">Planos</a>
+                    <a href="#contato" class="text-white hover:text-[#eab308] font-medium text-lg transition-colors duration-300 py-2">Contato</a>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -265,6 +278,17 @@
         </div>
     </section>
 
+    <!-- Video Section -->
+    <section class="py-16 bg-black">
+        <div class="container mx-auto px-4">
+            <div class="aspect-w-16 aspect-h-9 max-w-4xl mx-auto">
+                <iframe class="w-full h-96" src="https://www.youtube.com/embed/hRqEF16Wjs8" 
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
     <!-- Experimental Class Section -->
     <section class="py-16 bg-gray-50">
         <div class="container mx-auto px-4">
@@ -327,9 +351,6 @@
                     </div>
                     
                     <div class="flex space-x-4">
-                        <a href="https://wa.me/5511999999999" class="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full">
-                            <i class="fab fa-whatsapp text-xl"></i>
-                        </a>
                         <a href="https://www.instagram.com/alliancevilamatilde/" class="bg-pink-600 hover:bg-pink-700 text-white p-3 rounded-full">
                             <i class="fab fa-instagram text-xl"></i>
                         </a>
@@ -527,44 +548,32 @@
             </div>
             
             <div class="mt-8 pt-6 border-t border-gray-800 text-center text-gray-400">
-                <p>Academia de Jiu Jitsu Vila Matilde - Todos os direitos reservados</p>
+                <p>Academia de Jiu Jitsu Alliance Guarulhos - Todos os direitos reservados</p>
             </div>
         </div>
     </footer>
 
-    <!-- Floating WhatsApp Button -->
-    <a href="https://wa.me/5511999999999" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg z-50">
-        <i class="fab fa-whatsapp text-2xl"></i>
+    <!-- Modern Floating WhatsApp Button -->
+    <a href="https://wa.me/5511999999999" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-xl z-50 transition-all duration-300 hover:scale-110 animate-pulse">
+        <div class="relative">
+            <i class="fab fa-whatsapp text-3xl"></i>
+            <span class="absolute -top-1 -right-1 flex h-4 w-4">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-4 w-4 bg-green-100"></span>
+            </span>
+        </div>
     </a>
 
     <script>
-        // Enhanced mobile menu toggle with close button
-        const menuToggle = document.getElementById('menu-toggle');
-        const nav = document.querySelector('nav');
-        
-        menuToggle.addEventListener('click', function() {
-            nav.classList.toggle('hidden');
-            nav.classList.toggle('fixed');
-            nav.classList.toggle('inset-0');
-            nav.classList.toggle('flex');
-            nav.classList.toggle('flex-col');
-            nav.classList.toggle('items-center');
-            nav.classList.toggle('justify-center');
-            nav.classList.toggle('bg-black');
-            nav.classList.toggle('z-40');
-            nav.classList.toggle('space-y-8');
-            nav.classList.toggle('text-white');
-            
-            // Toggle between bars and times icon
-            const icon = this.querySelector('i');
-            if (icon.classList.contains('fa-bars')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
         });
     </script>
+
 </body>
+</html>
+</body>
+
 </html>
