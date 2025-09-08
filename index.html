@@ -3,7 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alliance Jiu-Jitsu Guarulhos - A Maior Equipe de Jiu-Jitsu do Mundo</title>
+  <title>Alliance Jiu-Jitsu Guarulhos | Academia Campeã de Jiu-Jitsu</title>
+  <meta name="description" content="Academia Alliance Jiu-Jitsu em Guarulhos - Turmas para iniciantes, intermediários e avançados. Metodologia campeã mundial. Agende sua aula experimental gratuita hoje mesmo!">
+  <meta name="keywords" content="jiu jitsu guarulhos, aula de jiu jitsu, alliance jiu jitsu, academia de artes marciais, defesa pessoal, jiu jitsu para iniciantes">
+  <link rel="icon" href="/assets/images/brand/icon-alliance.ico" type="image/x-icon">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://alliancejjguarulhos.com.br/">
+  <meta property="og:title" content="Alliance Jiu-Jitsu Guarulhos | Academia Campeã de Jiu-Jitsu">
+  <meta property="og:description" content="Faça parte da maior equipe de Jiu-Jitsu do mundo em Guarulhos. Turmas para todas as idades e níveis. Aula experimental gratuita!">
+  <meta property="og:image" content="https://alliancejjguarulhos.com.br/assets/images/sections/icon-alliance-1200x600.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="600">
+  <meta property="og:image:alt" content="Academia Alliance Jiu-Jitsu Guarulhos">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://alliancejjguarulhos.com.br/">
+  <meta property="twitter:title" content="Alliance Jiu-Jitsu Guarulhos | Academia Campeã de Jiu-Jitsu">
+  <meta property="twitter:description" content="Faça parte da maior equipe de Jiu-Jitsu do mundo em Guarulhos. Turmas para todas as idades e níveis. Aula experimental gratuita!">
+  <meta property="twitter:image" content="https://alliancejjguarulhos.com.br/assets/images/sections/icon-alliance-1200x600.jpg">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script>
@@ -918,26 +938,18 @@
         <p class="text-white text-center mb-6">Faça parte da Alliance! Experimente o Jiu-Jitsu que forma campeões.</p>
         
         <!-- Formulário modificado para usar FormSubmit -->
-       <form action="https://formsubmit.co/franklinb.dmaisinfo@gmail.com" method="POST" class="space-y-4">
-    <!-- Campos especiais do FormSubmit -->
-    <input type="hidden" name="_subject" value="Novo Agendamento - Alliance Jiu-Jitsu">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_next" value="https://alliancejjguarulhos.com.br/obrigado.html">
-    <input type="hidden" name="_cc" value="franklinb.dmaisinfo@gmail.com">
-    <input type="hidden" name="_autoresponse" value="Obrigado por agendar sua aula experimental! Entraremos em contato em breve.">
-    <input type="text" name="_honey" style="display:none">
-    
-    <!-- Campos normais do formulário -->
+       <form id="contact-form" class="space-y-4" onsubmit="sendToWhatsApp(event)">
+    <!-- Campos do formulário -->
     <div>
-        <input type="text" name="name" placeholder="Seu Nome" required 
+        <input type="text" id="name" name="name" placeholder="Seu Nome" required 
                class="w-full px-4 py-2 rounded bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400">
     </div>
     <div>
-        <input type="email" name="email" placeholder="Seu E-mail" required 
+        <input type="email" id="email" name="email" placeholder="Seu E-mail" required 
                class="w-full px-4 py-2 rounded bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400">
     </div>
     <div>
-        <input type="tel" name="phone" placeholder="Seu Telefone" required 
+        <input type="tel" id="phone" name="phone" placeholder="Seu Telefone" required 
                class="w-full px-4 py-2 rounded bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400">
     </div>
     <button type="submit" 
@@ -945,6 +957,24 @@
         AGENDE SUA AULA GRÁTIS
     </button>
 </form>
+
+<script>
+function sendToWhatsApp(event) {
+    event.preventDefault();
+    
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    
+    const message = `Olá, gostaria de agendar uma aula experimental!\n\n*Nome:* ${name}\n*E-mail:* ${email}\n*Telefone:* ${phone}\n\nPor favor, entre em contato comigo!`;
+    const encodedMessage = encodeURIComponent(message);
+    
+    window.open(`https://wa.me/5511971464775?text=${encodedMessage}`, '_blank');
+    
+    // Fechar o popup após envio
+    document.getElementById('popup-container').classList.add('hidden');
+}
+</script>
         
         <button id="close-popup" class="absolute top-4 right-4 text-gray-400 hover:text-white">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
