@@ -1,47 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alliance Jiu-Jitsu Guarulhos - A Maior Equipe de Jiu-Jitsu do Mundo</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        allianceBlack: '#000000',
-                        allianceGold: '#FFD700',
-                        allianceWhite: '#FFFFFF',
-                        allianceNeutral: '#333333'
-                    }
-                }
-            }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alliance Jiu-Jitsu Guarulhos | Academia Campeã de Jiu-Jitsu</title>
+  <meta name="description" content="Academia Alliance Jiu-Jitsu em Guarulhos - Turmas para iniciantes, intermediários e avançados. Metodologia campeã mundial. Agende sua aula experimental gratuita hoje mesmo!">
+  <meta name="keywords" content="jiu jitsu guarulhos, aula de jiu jitsu, alliance jiu jitsu, academia de artes marciais, defesa pessoal, jiu jitsu para iniciantes">
+  <link rel="icon" href="/assets/images/brand/icon-alliance.ico" type="image/x-icon">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://alliancejjguarulhos.com.br/">
+  <meta property="og:title" content="Alliance Jiu-Jitsu Guarulhos | Academia Campeã de Jiu-Jitsu">
+  <meta property="og:description" content="Faça parte da maior equipe de Jiu-Jitsu do mundo em Guarulhos. Turmas para todas as idades e níveis. Aula experimental gratuita!">
+  <meta property="og:image" content="https://alliancejjguarulhos.com.br/assets/images/sections/icon-alliance-1200x600.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="600">
+  <meta property="og:image:alt" content="Academia Alliance Jiu-Jitsu Guarulhos">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://alliancejjguarulhos.com.br/">
+  <meta property="twitter:title" content="Alliance Jiu-Jitsu Guarulhos | Academia Campeã de Jiu-Jitsu">
+  <meta property="twitter:description" content="Faça parte da maior equipe de Jiu-Jitsu do mundo em Guarulhos. Turmas para todas as idades e níveis. Aula experimental gratuita!">
+  <meta property="twitter:image" content="https://alliancejjguarulhos.com.br/assets/images/sections/icon-alliance-1200x600.jpg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            allianceBlack: '#000000',
+            allianceGold: '#FFD700',
+            allianceWhite: '#FFFFFF',
+            allianceNeutral: '#333333'
+          }
         }
-    </script>
+      }
+    }
+  </script>
     <style>
-        .hero-video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
-            display: block !important;
-            opacity: 1 !important;
-        }
-        .hero-overlay {
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.6));
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-
+         /* Mantive seus estilos customizados */
+    .hero-video {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    .hero-overlay {
+      background: linear-gradient(to bottom, rgba(0,0,0,0.85), rgba(0,0,0,0.6));
+      position: absolute; top: 0; left: 0;
+      width: 100%; height: 100%;
+      z-index: -1;
+    }
+    .social-icon { transition: all 0.3s ease; }
+    .social-icon:hover { transform: translateY(-3px); color: #FFD700;
+    
+    }
         /* Header inicial (topo da página) - transparente com texto escuro */
         header {
             background-color: rgba(255, 255, 255, 0.9);
@@ -78,10 +95,6 @@
             transition: all 0.3s ease;
         }
         
-        /* Logo quando scrolled (escuro) */
-        header.scrolled #logo {
-            content: url("https://static.wixstatic.com/media/0da99f_b4419b84c77f49dab61031a4d49b2151~mv2.png");
-        }
 
         /* Mobile menu - ajustar cores para estado inicial */
         #mobile-menu {
@@ -200,26 +213,104 @@
                 height: 300px;
             }
         }
+   
+   /* Estilos do Popup */
+        @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+    }
+
+     .popup-animation {
+    animation: fadeIn 0.5s ease-out forwards;
+    }
+
+   .overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+   }
+
+
+      /* Benefit Card*/
+
+     @keyframes countUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .count-animation {
+            animation: countUp 1s ease-out forwards;
+        }
+      .benefit-card {
+            transition: all 0.3s ease;
+        }
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+      /* .hero-video */
+ .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100vw;
+            height: 100vh;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+            z-index: -1;
+            pointer-events: none;
+        }
+        
+        .hero-overlay {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.6));
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        
+        .video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -2;
+        }
+        
+        /* Outros estilos permanecem os mesmos */
+
+
+
     </style>
+    
 </head>
+
 <body class="font-sans antialiased text-gray-800 bg-allianceWhite">
     <!-- Header -->
-    <header class="sticky top-0 z-50 text-white">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center">
-                <!-- Logo dinâmico -->
-                <img id="logo" src="https://i.imgur.com/GrXutAp.png" alt="Alliance Jiu-Jitsu Caruaru" class="h-12">
-            </div>
+  <header class="sticky top-0 z-50 text-white bg-white bg-opacity-90">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center">
+        <!-- Logo otimizado -->
+          <picture id="logo-container">
+      <source id="logo-source-avif" srcset="/assets/images/brand/logo-alliance-black-200x70.avif" type="image/avif">
+      <source id="logo-source-webp" srcset="/assets/images/brand/logo-alliance-black-200x70.webp" type="image/webp">
+      <img id="logo-img"
+       src="/assets/images/brand/logo-alliance-black-200x70.png"
+       alt="Logo oficial da Alliance Jiu-Jitsu Guarulhos"
+       class="h-12 w-auto"
+       width="200" height="70">
+          </picture>
+      </div>
 
             <!-- Desktop Menu -->
             <nav class="hidden md:flex space-x-8 items-center font-medium">
                 <a href="#inicio" class="hover:text-allianceGold transition">Alliance</a>
-                <a href="#horarios" class="hover:text-allianceGold transition">Horários</a>
-                <a href="#programas" class="hover:text-allianceGold transition">Programas</a>
-                <a href="#planos" class="hover:text-allianceGold transition">Planos</a>
-                <a href="#blog" class="hover:text-allianceGold transition">Blog</a>
-                <a href="#contato" class="hover:text-allianceGold transition">Contato</a>
-                <a href="#agendar" class="cta-top font-bold py-2 px-4 rounded-lg shadow-lg transition" style="background-color: #333333;">AGENDE SUA AULA GRÁTIS</a>
+                <a href="#metodologia" class="hover:text-allianceGold transition">Metodologia</a>
+                <a href="https://wa.me/5511971464775" class="hover:text-allianceGold transition">Planos</a>
+                <a href="#localizacao" class="hover:text-allianceGold transition">Horários</a>
+                <a href="#localizacao" class="hover:text-allianceGold transition">Contato</a>
+                <a href="https://wa.me/5511971464775" class="cta-top font-bold py-2 px-4 rounded-lg shadow-lg transition" style="background-color: #333333;">AGENDE SUA AULA GRÁTIS</a>
             </nav>
 
             <!-- Mobile Menu Button -->
@@ -229,76 +320,257 @@
         </div>
 
         <!-- Mobile Menu -->
-        <div class="md:hidden hidden bg-allianceBlack text-white py-4 px-4" id="mobile-menu">
-            <a href="#inicio" class="block py-2">Alliance</a>
-            <a href="#horarios" class="block py-2">Horários</a>
-            <a href="#programas" class="block py-2">Programas</a>
-            <a href="#planos" class="block py-2">Planos</a>
-            <a href="#blog" class="block py-2">Blog</a>
-            <a href="#contato" class="block py-2">Contato</a>
-            <a href="#agendar" class="mt-4 block cta-top font-bold py-3 px-6 rounded-lg text-center" style="background-color: #333333;">AGENDE SUA AULA GRÁTIS</a>
+        <div class="md:hidden hidden bg-white text-gray-800 py-4 px-4" id="mobile-menu">
+            <a href="#inicio" class="block py-2 hover:text-allianceGold transition">Alliance</a>
+            <a href="#escola-campea" class="block py-2 hover:text-allianceGold transition">Escola Campeã</a>
+            <a href="#metodologia" class="block py-2 hover:text-allianceGold transition">Metodologia</a>
+            <a href="https://wa.me/5511971464775" class="block py-2 hover:text-allianceGold transition">Planos</a>
+            <a href="#localizacao" class="block py-2 hover:text-allianceGold transition">Contato</a>
+            <a href="https://wa.me/5511971464775" class="mt-4 block cta-top font-bold py-3 px-6 rounded-lg text-center text-white" style="background-color: #333333;">AGENDE SUA AULA GRÁTIS</a>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="inicio" class="relative h-screen flex items-center justify-center overflow-hidden">
-        <div class="hero-overlay"></div>
-        <!-- Vídeo principal (sempre visível) -->
-        <video autoplay muted loop playsinline class="hero-video" id="hero-video">
-            <source src="https://videos.pexels.com/video-files/8611719/8611719-hd_1920_1080_30fps.mp4" type="video/mp4">
-            Seu navegador não suporta vídeo HTML5.
-        </video>
-        <div class="container mx-auto px-4 z-10 text-center text-white">
-            <h1 class="hero-title text-4xl md:text-6xl font-extrabold mb-4">
-                A MAIOR EQUIPE DE JIU-JITSU DO MUNDO AGORA EM GUARULHOS
-            </h1>
-            <p class="hero-subtitle text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-                Garanta sua aula experimental gratuita e faça parte da Alliance!
-                <span class="block font-bold mt-2">Experimente o Jiu-Jitsu que forma campeões.</span>
-            </p>
-            <a href="#agendar" class="cta-hero">
-                QUERO FAZER MINHA AULA TESTE
-            </a>
+     <!-- Hero Section com vídeo hospedado diretamente -->
+      
+<section id="inicio" class="relative h-screen flex items-center justify-center overflow-hidden">
+    <div class="hero-overlay"></div>
+    <!-- Vídeo otimizado com poster -->
+    <video autoplay muted loop playsinline class="hero-video" id="hero-video"
+           preload="auto" poster="/assets/images/hero/hero-poster.jpg">
+      <source src="/assets/images/hero/" type="video/mp4">
+      Seu navegador não suporta vídeo HTML5.
+    </video>
+    <div class="container mx-auto px-4 z-10 text-center text-white">
+      <h1 class="hero-title text-4xl md:text-6xl font-extrabold mb-4">
+        A maior equipe de Jiu-Jitsu do mundo agora em Guarulhos
+      </h1>
+      <p class="hero-subtitle text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+        Garanta sua aula experimental gratuita e faça parte da Alliance.
+        <span class="block font-bold mt-2">Experimente o Jiu-Jitsu que forma campeões.</span>
+      </p>
+      <a href="https://wa.me/5511971464775" class="cta-hero">QUERO MINHA AULA GRÁTIS</a>
+    </div>
+  </section>
+
+
+
+    <!-- Restante do conteúdo -->
+    <!-- Seção Introdução -->
+    <section class="relative py-32 bg-white overflow-hidden">
+        <div class="absolute inset-y-0 right-0 w-1/2 h-full bg-cover bg-no-repeat bg-right opacity-10 hidden md:block" style="background-image: url('/assets/images/ui/aliance.png'); background-size: auto 100%;"></div>
+        <div class="container mx-auto px-4 relative">
+            <div class="max-w-2xl md:pr-32">
+                <h2 class="text-4xl md:text-5xl font-bold text-black mb-4 font-[Oswald]">Mais que uma academia,</h2>
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">uma família campeã.</h3>
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                   Com uma metodologia reconhecida mundialmente, a Alliance forma campeões dentro e fora dos tatames. Em Guarulhos, seguimos essa tradição para que você evolua com segurança, disciplina e motivação.
+                </p>
+                <a href="#metodologia" class="inline-block text-[#FEBC11] hover:text-yellow-600 font-semibold transition duration-300">
+                    Conheça a nossa história →
+                </a>
+            </div>
         </div>
     </section>
+
+  <!-- Escola Campeã -->
+  <section class="py-16 bg-gradient-to-b from-[#FEBC11] to-[#f9fafb]">
+    <div class="container mx-auto px-4 flex flex-col lg:flex-row gap-12 items-center">
+      <div class="lg:w-1/2">
+        <!--  Imagem responsiva otimizada -->
+        <picture>
+          <source srcset="/assets/images/sections/escola-campea-1200x800.avif" type="image/avif" media="(min-width:768px)">
+          <source srcset="/assets/images/sections/escola-campea-1200x800.webp" type="image/webp" media="(min-width:768px)">
+          <source srcset="/assets/images/sections/escola-campea-600x400.avif" type="image/avif" media="(max-width:767px)">
+          <source srcset="/assets/images/sections/escola-campea-600x400.webp" type="image/webp" media="(max-width:767px)">
+          <img src="/assets/images/sections/escola-campea.jpg"
+               alt="Academia Alliance Jiu-Jitsu Guarulhos - Escola campeã dentro e fora dos tatames"
+               class="w-full h-auto lg:h-[500px] object-cover rounded-xl shadow-lg"
+               loading="lazy"
+               width="1200" height="800">
+        </picture>
+      </div>
+      <div class="lg:w-1/2 text-center lg:text-left">
+        <h2 class="text-4xl font-bold text-black mb-6">Uma escola campeã, dentro e fora dos tatames.</h2>
+        <p class="text-xl text-black mb-8">Com mais de <strong>300 filiais</strong>, <strong>30 mil alunos</strong> e <strong>14 títulos mundiais</strong>, a Alliance é referência global em Jiu-Jitsu. Aqui em Guarulhos, você treina com a <strong>maior e mais vitoriosa equipe do mundo</strong>.</p>
+      
+
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="bg-black bg-opacity-10 p-4 rounded-lg">
+                            <p class="text-4xl font-bold text-black">300+</p>
+                            <p class="text-sm">Filiais no mundo</p>
+                        </div>
+                        <div class="bg-black bg-opacity-10 p-4 rounded-lg">
+                            <p class="text-4xl font-bold text-black">30k+</p>
+                            <p class="text-sm">Alunos</p>
+                        </div>
+                        <div class="bg-black bg-opacity-10 p-4 rounded-lg">
+                            <p class="text-4xl font-bold text-black">10x</p>
+                            <p class="text-sm">Campeã Feminina</p>
+                        </div>
+                        <div class="bg-black bg-opacity-10 p-4 rounded-lg">
+                            <p class="text-4xl font-bold text-black">4x</p>
+                            <p class="text-sm">Campeã Juvenil</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-black text-white p-6 rounded-lg text-center">
+                        <p class="text-5xl font-bold mb-2">14x</p>
+                        <p class="text-xl uppercase tracking-wider">Campeã Mundial</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Metodologia e Benefícios -->
+    <section class="py-16 bg-[#f9fafb]">
+        <div class="container mx-auto px-4">
+            <!-- Cabeçalho -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Metodologia Alliance:
+</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto"> Reconhecida e aplicada no mundo inteiro com treinos planejados, revisados e aplicados em mais de 300 academias ao redor do globo</p>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-12">
+                <!-- Coluna da Metodologia -->
+                <div class="lg:w-1/2">
+                    <div class="bg-white p-8 rounded-xl shadow-sm">
+                        <div class="w-16 h-16 bg-yellow-400 rounded-full flex items-center justify-center mb-6">
+                            <i class="fas fa-user-ninja text-white text-2xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">O melhor caminho para a sua evolução.</h3>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Do iniciante ao competidor, criamos um método exclusivo que guia o aluno desde a primeira aula até os níveis mais avançados. Nossa metodologia é revisada e aplicada em centenas de academias pelo mundo, garantindo qualidade e resultado para todos os perfis — adultos, mulheres e crianças.
+                        </p>
+                       
+                        <div class="bg-gray-100 p-4 rounded-lg border-l-4 border-yellow-400 mb-8">
+                            <p class="text-gray-700 font-medium">Leve seu desempenho ao nível máximo.</p>
+                        </div>
+                        <a href="https://wa.me/5511971464775" class="inline-block bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-lg transition duration-300">
+                            Comece sua jornada no Jiu-Jitsu hoje
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Coluna dos Benefícios -->
+                <div class="lg:w-1/2">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center lg:text-left">Os Benefícios do Jiu-Jitsu</h3>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Benefício 1 -->
+                        <div class="benefit-card bg-white p-6 rounded-xl shadow-sm">
+                            <div class="w-12 h-12 bg-[#152E39] rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-star text-white text-xl"></i>
+                            </div>
+                            <h4 class="text-lg font-semibold text-gray-800 mb-2">Autoconfiança </h4>
+                            <p class="text-gray-600 text-sm">
+                                → Aprenda a se proteger com técnica e inteligência.
+                            </p>
+                        </div>
+
+                        <!-- Benefício 2 -->
+                        <div class="benefit-card bg-white p-6 rounded-xl shadow-sm">
+                            <div class="w-12 h-12 bg-[#152E39] rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-shield-alt text-white text-xl"></i>
+                            </div>
+                            <h4 class="text-lg font-semibold text-gray-800 mb-2">Defesa pessoal </h4>
+                            <p class="text-gray-600 text-sm">
+                               → aprenda a se proteger com técnica e inteligência.
+                            </p>
+                        </div>
+
+                        <!-- Benefício 3 -->
+                        <div class="benefit-card bg-white p-6 rounded-xl shadow-sm">
+                            <div class="w-12 h-12 bg-[#72A084] rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-spa text-white text-xl"></i>
+                            </div>
+                            <h4 class="text-lg font-semibold text-gray-800 mb-2">Bem-estar </h4>
+                            <p class="text-gray-600 text-sm">
+                                → Alivie o estresse e sinta mais energia no dia a dia.
+                            </p>
+                        </div>
+
+                        <!-- Benefício 4 -->
+                        <div class="benefit-card bg-white p-6 rounded-xl shadow-sm">
+                            <div class="w-12 h-12 bg-[#152E39] rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-running text-white text-xl"></i>
+                            </div>
+                            <h4 class="text-lg font-semibold text-gray-800 mb-2">Definição muscular </h4>
+                            <p class="text-gray-600 text-sm">
+                              → Tonifique e fortaleça seu corpo de forma completa.
+                            </p>
+                        </div>
+
+                        <!-- Benefício 5 -->
+                        <div class="benefit-card bg-white p-6 rounded-xl shadow-sm">
+                            <div class="w-12 h-12 bg-[#72A084] rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-running text-white text-xl"></i>
+                            </div>
+                            <h4 class="text-lg font-semibold text-gray-800 mb-2">Condicionamento físico </h4>
+                            <p class="text-gray-600 text-sm">
+                             → Fortaleça corpo e mente com treinos completos.
+                            </p>
+                        </div>
+
+                        <!-- Benefício 6 -->
+                        <div class="benefit-card bg-white p-6 rounded-xl shadow-sm">
+                            <div class="w-12 h-12 bg-[#FEBC11] rounded-full flex items-center justify-center mb-4">
+                                <i class="fas fa-weight text-white text-xl"></i>
+                            </div>
+                            <h4 class="text-lg font-semibold text-gray-800 mb-2">Emagrecimento saudável </h4>
+                            <p class="text-gray-600 text-sm">
+                            → Queime calorias e melhore sua qualidade de vida.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 
     <!-- Seção de Metodologia (fundo #333333) -->
     <section id="metodologia" class="py-16 bg-[#333333]">
         <div class="container mx-auto px-4">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">METODOLOGIA</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Níveis de aprendizado para cada jornada</h2>
                 <div class="w-24 h-1 bg-allianceGold mx-auto"></div>
             </div>
             
             <div class="max-w-4xl mx-auto text-center mb-12">
                 <p class="text-gray-200 leading-relaxed text-lg">
-                    Desenvolver uma metodologia própria para ensinar JIU JITSU transformou a história da ALLIANCE. 
-                    Criamos um método de ensino que cuida do aluno desde a primeira aula, para que ele entenda todo o processo 
-                    e possa evoluir em cada treino. Separamos os níveis de aulas e treinamos nossos professores para que entreguem 
-                    uma aula cada vez melhor. Nosso método é revisitado e atualizado com frequência baseado nas melhores práticas 
-                    em nossas academias ao redor do mundo.
+                    Na Alliance, cada aluno evolui no seu tempo. Organizamos as aulas em módulos pensados para iniciantes, praticantes intermediários, avançados, competidores e crianças — garantindo aprendizado contínuo e motivador em todas as fases.
                 </p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
                 <!-- Iniciantes -->
-                <div class="method-card bg-allianceWhite rounded-lg shadow-lg overflow-hidden">
-                    <div class="h-48 bg-gray-200">
-                        <img src="https://static.wixstatic.com/media/61c425f7497c41999e10fc1bf7da2f86.jpg/v1/fill/w_301,h_240,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Jujitsu%20Posture.jpg" 
-                             alt="Iniciantes" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">INICIANTES</h3>
-                        <p class="text-gray-700">
-                            Defesa Pessoal, técnicas e fundamentos do Jiu Jitsu. Uma das turmas de maior sucesso em nossa escola.
-                        </p>
-                    </div>
-                </div>
+                  <div class="method-card bg-allianceWhite rounded-lg shadow-lg overflow-hidden">
+        <div class="h-48 bg-gray-200">
+          <picture>
+            <source srcset="/assets/images/sections/metodologia-iniciantes-800x600.avif" type="image/avif" media="(min-width:768px)">
+            <source srcset="/assets/images/sections/metodologia-iniciantes-800x600.webp" type="image/webp" media="(min-width:768px)">
+            <source srcset="/assets/images/sections/metodologia-iniciantes-400x300.avif" type="image/avif" media="(max-width:767px)">
+            <source srcset="/assets/images/sections/metodologia-iniciantes-400x300.webp" type="image/webp" media="(max-width:767px)">
+            <img src="/assets/images/sections/metodologia-iniciantes.jpg"
+                 alt="Treinamento para iniciantes na Alliance Jiu-Jitsu Guarulhos"
+                 class="w-full h-full object-cover"
+                 loading="lazy"
+                 width="800" height="600">
+          </picture>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">INICIANTES</h3>
+          <p class="text-gray-700"> Defesa Pessoal, técnicas e fundamentos do Jiu Jitsu. Uma das turmas de maior sucesso em nossa escola.</p>
+        </div>
+      </div>
                 
                 <!-- Intermediário -->
                 <div class="method-card bg-allianceWhite rounded-lg shadow-lg overflow-hidden">
                     <div class="h-48 bg-gray-200">
-                        <img src="https://static.wixstatic.com/media/61c425f7497c41999e10fc1bf7da2f86.jpg/v1/fill/w_301,h_240,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Jujitsu%20Posture.jpg" 
+                        <img src="/assets/images/sections/metodologia-intermediario.jpg" 
                              alt="Intermediário" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
@@ -313,7 +585,7 @@
                 <!-- Avançado -->
                 <div class="method-card bg-allianceWhite rounded-lg shadow-lg overflow-hidden">
                     <div class="h-48 bg-gray-200">
-                        <img src="https://static.wixstatic.com/media/61c425f7497c41999e10fc1bf7da2f86.jpg/v1/fill/w_301,h_240,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Jujitsu%20Posture.jpg" 
+                        <img src="/assets/images/sections/metodologia-avancado.jpg" 
                              alt="Avançado" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
@@ -326,23 +598,30 @@
                 </div>
                 
                 <!-- Competição -->
-                <div class="method-card bg-allianceWhite rounded-lg shadow-lg overflow-hidden">
-                    <div class="h-48 bg-gray-200">
-                        <img src="https://static.wixstatic.com/media/61c425f7497c41999e10fc1bf7da2f86.jpg/v1/fill/w_301,h_240,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Jujitsu%20Posture.jpg" 
-                             alt="Competição" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">COMPETIÇÃO</h3>
-                        <p class="text-gray-700">
-                            Módulo exclusivo para formar competidores e representar a Alliance em campeonatos da IBJJF.
-                        </p>
-                    </div>
-                </div>
+           <div class="method-card bg-allianceWhite rounded-lg shadow-lg overflow-hidden">
+        <div class="h-48 bg-gray-200">
+          <picture>
+            <source srcset="/assets/images/sections/metodologia-competicao-800x600.avif" type="image/avif" media="(min-width:768px)">
+            <source srcset="/assets/images/sections/metodologia-competicao-800x600.webp" type="image/webp" media="(min-width:768px)">
+            <source srcset="/assets/images/sections/metodologia-competicao-400x300.avif" type="image/avif" media="(max-width:767px)">
+            <source srcset="/assets/images/sections/metodologia-competicao-400x300.webp" type="image/webp" media="(max-width:767px)">
+            <img src="/assets/images/sections/metodologia-competicao.jpg"
+                 alt="Treinamento para Competição na Alliance Jiu-Jitsu Guarulhos"
+                 class="w-full h-full object-cover"
+                 loading="lazy"
+                 width="800" height="600">
+          </picture>
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-bold text-gray-800 mb-3">COMPETIÇÃO</h3>
+          <p class="text-gray-700">O objetivo deste módulo é fazer a transição do aluno iniciante para de fato começar a treinar. Ideal também para quem deseja retornar a prática..</p>
+        </div>
+      </div>
                 
                 <!-- Kids -->
                 <div class="method-card bg-allianceWhite rounded-lg shadow-lg overflow-hidden">
                     <div class="h-48 bg-gray-200">
-                        <img src="https://static.wixstatic.com/media/61c425f7497c41999e10fc1bf7da2f86.jpg/v1/fill/w_301,h_240,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Jujitsu%20Posture.jpg" 
+                        <img src="/assets/images/sections/metodologia-kids.jpg" 
                              alt="Kids" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
@@ -356,15 +635,15 @@
                 <!-- Planos -->
                 <div class="method-card bg-allianceGold rounded-lg shadow-lg overflow-hidden">
                     <div class="h-48 bg-gray-200">
-                        <img src="https://static.wixstatic.com/media/61c425f7497c41999e10fc1bf7da2f86.jpg/v1/fill/w_301,h_240,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Jujitsu%20Posture.jpg" 
+                        <img src="/assets/images/sections/metodologia-planos.jpg" 
                              alt="Planos" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6 text-center">
                         <h3 class="text-xl font-bold text-black mb-3">CONHEÇA NOSSOS PLANOS</h3>
                         <p class="text-black mb-4">
-                            Temos opções para todos os perfis e objetivos. Venha conhecer nossa estrutura e faça uma aula experimental.
+                            Temos opções para todos os perfis e objetivos. Venha conhecer nossa estrutura e faça uma aula experimental gratuita.
                         </p>
-                        <a href="#planos" class="bg-black text-white font-bold py-2 px-6 rounded-lg inline-block hover:bg-gray-800 transition">
+                        <a href="https://api.whatsapp.com/send/?phone=5511971464775&text=Ol%C3%A1%21+Gostaria+de+mais+informa%C3%A7%C3%B5es." class="bg-black text-white font-bold py-2 px-6 rounded-lg inline-block hover:bg-gray-800 transition">
                             Ver Planos
                         </a>
                     </div>
@@ -390,18 +669,42 @@
             </div>
             
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
-                <div class="h-48 bg-gray-200 rounded-lg flex items-center justify-center">
-                    <i class="fas fa-image text-4xl text-gray-400"></i>
-                </div>
-                <div class="h-48 bg-gray-200 rounded-lg flex items-center justify-center">
-                    <i class="fas fa-image text-4xl text-gray-400"></i>
-                </div>
-                <div class="h-48 bg-gray-200 rounded-lg flex items-center justify-center">
-                    <i class="fas fa-image text-4xl text-gray-400"></i>
-                </div>
-                <div class="h-48 bg-gray-200 rounded-lg flex items-center justify-center">
-                    <i class="fas fa-image text-4xl text-gray-400"></i>
-                </div>
+              <picture>
+          <source srcset="/assets/images/social/instagram/feed/post-1-400x400.avif" type="image/avif">
+          <source srcset="/assets/images/social/instagram/feed/post-1-512x512.webp" type="image/webp">
+          <img src="/assets/images/social/instagram/feed/post-1-512x512.jpg.jpg"
+               alt="Post do Instagram da Alliance Jiu-Jitsu Guarulhos"
+               class="w-full h-full object-cover rounded-lg"
+               loading="lazy"
+               width="400" height="400">
+        </picture>
+                   <picture>
+          <source srcset="/assets/images/social/instagram/feed/post-2-400x400.avif" type="image/avif">
+          <source srcset="/assets/images/social/instagram/feed/post-2-400x400.webp" type="image/webp">
+          <img src="/assets/images/social/instagram/feed/post-1-400x400.jpg.jpg"
+               alt="Post do Instagram da Alliance Jiu-Jitsu Guarulhos"
+               class="w-full h-full object-cover rounded-lg"
+               loading="lazy"
+               width="400" height="400">
+        </picture>
+               <picture>
+          <source srcset="/assets/images/social/instagram/feed/post-3-400x400.avif" type="image/avif">
+          <source srcset="/assets/images/social/instagram/feed/post-3-400x400.webp" type="image/webp">
+          <img src="/assets/images/social/instagram/feed/post-3-400x400.jpg"
+               alt="Post do Instagram da Alliance Jiu-Jitsu Guarulhos"
+               class="w-full h-full object-cover rounded-lg"
+               loading="lazy"
+               width="400" height="400">
+        </picture>
+                  <picture>
+          <source srcset="/assets/images/social/instagram/feed/post-4-400x400.avif" type="image/avif">
+          <source srcset="/assets/images/social/instagram/feed/post-4-400x400.webp" type="image/webp">
+          <img src="/assets/images/social/instagram/feed/post-4-400x400.jpg.jpg"
+               alt="Post do Instagram da Alliance Jiu-Jitsu Guarulhos"
+               class="w-full h-full object-cover rounded-lg"
+               loading="lazy"
+               width="400" height="400">
+        </picture>
             </div>
         </div>
     </section>
@@ -419,22 +722,39 @@
         </div>
     </section>
 
+  <!-- Seção CTA com fundo #333333 -->
+    <section class="py-16" style="background-color: #333333;">
+        <div class="container mx-auto px-4 text-center text-white">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Pronto para começar sua jornada no Jiu Jitsu?</h2>
+            <p class="text-xl mb-10 max-w-2xl mx-auto">Junte-se à equipe mais vitoriosa do mundo e descubra como o Jiu Jitsu pode transformar sua vida.</p>
+            <a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma aula experimental." class="cta-hero inline-block">
+                Agendar pelo WhatsApp
+            </a>
+        </div>
+    </section>
+
     <!-- Seção Aula Experimental (fundo #FFFFFF) -->
     <section class="py-16 bg-white">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center gap-8">
                 <div class="md:w-1/2">
-                    <div class="h-96 bg-gray-200 rounded-lg flex items-center justify-center">
-                        <i class="fas fa-calendar-check text-5xl text-gray-400"></i>
-                    </div>
+                      <picture>
+          <source srcset="/assets/images/sections/aula-experimental-800x600.avif" type="image/avif">
+          <source srcset="/assets/images/sections/aula-experimental-800x600.webp" type="image/webp">
+          <img src="/assets/images/sections/aula-experimental.jpg"
+               alt="Primeira aula experimental gratuita na Alliance Jiu-Jitsu Guarulhos"
+               class="w-full h-auto rounded-lg shadow-lg"
+               loading="lazy"
+               width="800" height="600">
+        </picture>
                 </div>
                 <div class="md:w-1/2">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">AULA EXPERIMENTAL</h2>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Sua primeira aula é por nossa conta.</h2>
                     <div class="w-24 h-1 bg-allianceGold mb-6"></div>
                     <p class="text-gray-600 mb-6 leading-relaxed">
-                        AGENDE A SUA! Uma experiência além do treino! Aula dinâmica, onde você aprende noções básicas de Jiu Jitsu além de conhecer algumas posturas com a melhor equipe de professores! Essa aula é grátis e individual.
+                        Descubra o Jiu-Jitsu da maior equipe do mundo com uma experiência única e gratuita. Treine com os melhores e dê o primeiro passo na sua jornada Alliance.
                     </p>
-                    <a href="#contato" class="bg-allianceBlack hover:bg-allianceGold text-white hover:text-black font-bold py-3 px-8 rounded-full inline-block transition duration-300">
+                    <a href="https://wa.me/5511971464775" class="bg-allianceBlack hover:bg-allianceGold text-white hover:text-black font-bold py-3 px-8 rounded-full inline-block transition duration-300">
                         QUERO AGENDAR
                     </a>
                 </div>
@@ -450,15 +770,15 @@
             
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
-                    <p class="text-lg mb-8 text-gray-700">Estamos localizados na Vila Galvão, Guarulhos, com fácil acesso e estacionamento próximo.</p>
+                    <p class="text-lg mb-8 text-gray-700">Estamos localizados no Jardim Santa Clara, Guarulhos, com fácil acesso e estacionamento próximo.</p>
                     
                     <div class="location-card bg-white p-8 rounded-lg shadow-lg">
                         <div class="mb-6">
                             <h3 class="text-xl font-semibold mb-3 text-allianceGold flex items-center">
                                 <i class="fas fa-map-marker-alt mr-2"></i> Endereço:
                             </h3>
-                            <p class="text-gray-800">Vila Galvão, Guarulhos - SP</p>
-                            <p class="text-gray-800">CEP: 07063-012</p>
+                            <p class="text-gray-800">Av. Barber Greene, 874 - Jardim Santa Clara</p>
+                            <p class="text-gray-800">Guarulhos - SP, 07120-260</p>
                         </div>
                         
                         <div>
@@ -498,33 +818,36 @@
         </div>
     </section>
 
-    <!-- Seção CTA com fundo #333333 -->
-    <section class="py-16" style="background-color: #333333;">
-        <div class="container mx-auto px-4 text-center text-white">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">Pronto para começar sua jornada no Jiu Jitsu?</h2>
-            <p class="text-xl mb-10 max-w-2xl mx-auto">Junte-se à equipe mais vitoriosa do mundo e descubra como o Jiu Jitsu pode transformar sua vida.</p>
-            <a href="https://wa.me/5511999999999?text=Olá! Gostaria de agendar uma aula experimental." class="cta-hero inline-block">
-                Agendar pelo WhatsApp
-            </a>
-        </div>
-    </section>
+  
 
-    <!-- Footer -->
+    <!-- Footer Banner -->
+      <!-- Footer Banner -->
+  <div class="w-full h-auto">
+    <picture>
+      <source srcset="/assets/images/ui/banner-footer-1200x300.avif" type="image/avif">
+      <source srcset="/assets/images/ui/banner-footer-1200x300.webp" type="image/webp">
+      <img src="/assets/images/ui/banner-footer.jpg"
+           alt="Banner institucional da Alliance Jiu-Jitsu Guarulhos"
+           class="w-full h-auto"
+           loading="lazy"
+           width="1200" height="300">
+    </picture>
+  </div>
     <footer class="bg-allianceBlack text-allianceWhite pt-16 pb-8">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
                 <!-- Seção Alliance Jiu Jitsu -->
                 <div class="footer-section">
-                    <img src="https://static.wixstatic.com/media/0da99f_b4419b84c77f49dab61031a4d49b2151~mv2.png" alt="Alliance Jiu Jitsu" class="h-16 mb-6">
-                    <p class="mb-6">A maior e mais vitoriosa equipe de Jiu Jitsu do mundo. Tradição e excelência no ensino da arte suave.</p>
+                    <img src="/assets/images/brand/logo-alliance-footer.png" alt="Alliance Jiu Jitsu" class="w-full mb-6">
+                    <p class="mb-6 text-sm md:text-base">A maior e mais vitoriosa equipe de Jiu Jitsu do mundo. Tradição e excelência no ensino da arte suave.</p>
                     <div class="flex space-x-4 justify-center md:justify-start">
-                        <a href="#" class="social-icon text-gray-400 hover:text-allianceGold text-xl">
+                        <a href="https://www.youtube.com/@AllianceJiuJitsuChannel" class="social-icon text-gray-400 hover:text-allianceGold text-xl">
                             <i class="fab fa-youtube"></i>
                         </a>
-                        <a href="#" class="social-icon text-gray-400 hover:text-allianceGold text-xl">
+                        <a href="https://www.linkedin.com/company/alliance-jiu-jitsu-association/" class="social-icon text-gray-400 hover:text-allianceGold text-xl">
                             <i class="fab fa-linkedin"></i>
                         </a>
-                        <a href="#" class="social-icon text-gray-400 hover:text-allianceGold text-xl">
+                        <a href="https://www.instagram.com/allianceguarulhos/" class="social-icon text-gray-400 hover:text-allianceGold text-xl">
                             <i class="fab fa-instagram"></i>
                         </a>
                     </div>
@@ -536,15 +859,15 @@
                     <ul class="space-y-4">
                         <li class="flex items-start">
                             <i class="fas fa-phone text-allianceGold mt-1 mr-3"></i>
-                            <span>(11) 99999-9999</span>
+                            <span>(11) 97146-4775</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-envelope text-allianceGold mt-1 mr-3"></i>
-                            <span>contato@allianceguarulhos.com.br</span>
+                            <span>allianceguarulhos@gmail.com</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-map-marker-alt text-allianceGold mt-1 mr-3"></i>
-                            <span>Vila Galvão, Guarulhos - SP<br>CEP: 07063-012</span>
+                            <span>Jardim Santa Clara, Guarulhos - SP<br>CEP: 07120-260</span>
                         </li>
                     </ul>
                 </div>
@@ -566,7 +889,7 @@
                             <span>Fechado</span>
                         </li>
                     </ul>
-                    <a href="https://wa.me/5511999999999?text=Olá! Gostaria de mais informações." class="cta-top font-bold py-2 px-6 rounded-lg transition-colors inline-flex items-center">
+                    <a href="https://wa.me/5511971464775?text=Olá! Gostaria de mais informações." class="cta-top font-bold py-2 px-6 rounded-lg transition-colors inline-flex items-center">
                         <i class="fab fa-whatsapp mr-2"></i> Fale Conosco
                     </a>
                 </div>
@@ -578,7 +901,7 @@
                         <li><a href="#inicio" class="footer-link hover:text-allianceGold">Home</a></li>
                         <li><a href="#localizacao" class="footer-link hover:text-allianceGold">Localização</a></li>
                         <li><a href="#metodologia" class="footer-link hover:text-allianceGold">Metodologia</a></li>
-                        <li><a href="#planos" class="footer-link hover:text-allianceGold">Planos</a></li>
+                        <li><a href="https://wa.me/5511971464775" class="footer-link hover:text-allianceGold">Planos</a></li>
                         <li><a href="#contato" class="footer-link hover:text-allianceGold">Contato</a></li>
                     </ul>
                 </div>
@@ -589,20 +912,78 @@
             
             <!-- Direitos autorais -->
             <div class="text-center text-gray-400">
-                <p>&copy; 2025 Alliance Jiu Jitsu Guarulhos - Vila Galvão. Todos os direitos reservados.</p>
+                <p>&copy; 2025 Alliance Jiu Jitsu Guarulhos - Av. Barber Greene, 874 - Jardim Santa ClaraGuarulhos - SP, 07120-260. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
     <!-- Instagram Float Button -->
-    <a href="https://instagram.com" target="_blank" class="fixed bottom-24 right-6 bg-gradient-to-tr from-yellow-500 via-pink-500 to-purple-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg transition transform hover:scale-110 z-50" aria-label="Abrir Instagram">
+    <a href="https://www.instagram.com/allianceguarulhos/" target="_blank" class="fixed bottom-24 right-6 bg-gradient-to-tr from-yellow-500 via-pink-500 to-purple-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg transition transform hover:scale-110 z-50" aria-label="Abrir Instagram">
         <i class="fab fa-instagram"></i>
     </a>
 
     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/5511999999999" target="_blank" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg transition transform hover:scale-110 z-50" aria-label="Abrir WhatsApp">
+    <a href="https://wa.me/5511971464775" target="_blank" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg transition transform hover:scale-110 z-50" aria-label="Abrir WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
+
+<!-- Popup Container (hidden by default) -->
+<div id="popup-container" class="fixed inset-0 z-50 flex items-center justify-center hidden overlay">
+    <div class="bg-black p-8 rounded-lg shadow-xl max-w-md w-full mx-4 border-2 border-yellow-400 popup-animation">
+        <div class="flex justify-center mb-6">
+            <img src="https://static.wixstatic.com/media/0da99f_b4419b84c77f49dab61031a4d49b2151~mv2.png" alt="Alliance Logo" class="h-24">
+        </div>
+        
+        <h2 class="text-yellow-400 text-2xl font-bold text-center mb-4">Garanta sua aula experimental gratuita!</h2>
+        <p class="text-white text-center mb-6">Faça parte da Alliance! Experimente o Jiu-Jitsu que forma campeões.</p>
+        
+        <!-- Formulário modificado para usar FormSubmit -->
+       <form id="contact-form" class="space-y-4" onsubmit="sendToWhatsApp(event)">
+    <!-- Campos do formulário -->
+    <div>
+        <input type="text" id="name" name="name" placeholder="Seu Nome" required 
+               class="w-full px-4 py-2 rounded bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+    </div>
+    <div>
+        <input type="email" id="email" name="email" placeholder="Seu E-mail" required 
+               class="w-full px-4 py-2 rounded bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+    </div>
+    <div>
+        <input type="tel" id="phone" name="phone" placeholder="Seu Telefone" required 
+               class="w-full px-4 py-2 rounded bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+    </div>
+    <button type="submit" 
+            class="w-full bg-yellow-400 text-black font-bold py-3 px-4 rounded hover:bg-yellow-500 transition duration-300 transform hover:scale-105">
+        AGENDE SUA AULA GRÁTIS
+    </button>
+</form>
+
+<script>
+function sendToWhatsApp(event) {
+    event.preventDefault();
+    
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    
+    const message = `Olá, gostaria de agendar uma aula experimental!\n\n*Nome:* ${name}\n*E-mail:* ${email}\n*Telefone:* ${phone}\n\nPor favor, entre em contato comigo!`;
+    const encodedMessage = encodeURIComponent(message);
+    
+    window.open(`https://wa.me/5511971464775?text=${encodedMessage}`, '_blank');
+    
+    // Fechar o popup após envio
+    document.getElementById('popup-container').classList.add('hidden');
+}
+</script>
+        
+        <button id="close-popup" class="absolute top-4 right-4 text-gray-400 hover:text-white">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+    </div>
+</div>
+
 
 <script>
     // Mobile menu toggle
@@ -616,14 +997,27 @@
     const header = document.querySelector('header');
     let ticking = false;
     
-    function updateHeader(scrollPos) {
-        if (scrollPos > 50) {
-            header.classList.add('scrolled');
-        } else {
-            header.classList.remove('scrolled');
-        }
-        ticking = false;
-    }
+function updateHeader(scrollPos) {
+  if (scrollPos > 50) {
+    header.classList.add('scrolled');
+
+    //  Trocar logo para versão branca
+    document.getElementById('logo-source-avif').srcset = "/assets/images/brand/logo-alliance-white-200x70.avif";
+    document.getElementById('logo-source-webp').srcset = "/assets/images/brand/logo-alliance-white-200x70.webp";
+    document.getElementById('logo-img').src = "/assets/images/brand/logo-alliance-white-200x70.png";
+  } else {
+    header.classList.remove('scrolled');
+
+    //  Voltar logo para versão preta
+    document.getElementById('logo-source-avif').srcset = "/assets/images/brand/logo-alliance-black-200x70.avif";
+    document.getElementById('logo-source-webp').srcset = "/assets/images/brand/logo-alliance-black-200x70.webp";
+    document.getElementById('logo-img').src = "/assets/images/brand/logo-alliance-black-200x70.png";
+  }
+}
+
+
+
+   
     
     function onScroll() {
         if (!ticking) {
@@ -655,6 +1049,22 @@
         // Forçar verificação inicial
         updateHeader(window.scrollY);
     });
+
+  // Popup functionality
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Show popup after 15 seconds
+    setTimeout(function() {
+        const popup = document.getElementById('popup-container');
+        popup.classList.remove('hidden');
+    }, 15000);
+    
+    // Close popup when X is clicked
+    document.getElementById('close-popup').addEventListener('click', function() {
+        document.getElementById('popup-container').classList.add('hidden');
+    });
+});
+
 </script>
 </body>
 </html>
